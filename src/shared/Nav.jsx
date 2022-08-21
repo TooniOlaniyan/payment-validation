@@ -35,7 +35,7 @@ const Main = styled.div`
     width: 90vw;
   }
   @media screen and (max-width: 890px) {
-    width: 90vw;
+    width: 70vw;
   }
   .heading {
     p {
