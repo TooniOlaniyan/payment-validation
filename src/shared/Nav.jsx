@@ -34,6 +34,9 @@ const Main = styled.div`
   @media screen and (max-width: 600px) {
     width: 90vw;
   }
+  @media screen and (max-width: 890px) {
+    width: 90vw;
+  }
   .heading {
     p {
       color: #4e598c;

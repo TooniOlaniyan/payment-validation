@@ -105,6 +105,9 @@ const Info = styled.div`
   @media screen and (max-width: 600px) {
     width: 90vw;
   }
+  @media screen and (max-width: 890px) {
+    width: 90vw;
+  }
   form {
     width: 100%;
     display: flex;
