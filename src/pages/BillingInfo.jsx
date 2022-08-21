@@ -102,6 +102,9 @@ const Info = styled.div`
   align-items: center;
   width: 40vw;
   margin: 4rem auto;
+  @media screen and (max-width: 600px) {
+    width: 90vw;
+  }
   form {
     width: 100%;
     display: flex;
@@ -117,6 +120,9 @@ const Details = styled.div`
   align-items: center;
   width: 100%;
   gap: 1rem;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
   .cardDetails {
     flex: 7;
     display: flex;
@@ -124,6 +130,9 @@ const Details = styled.div`
     align-items: flex-start;
     flex-direction: column;
     gap: 0.7rem;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
     input {
       padding: 0.7rem;
       width: 100%;
@@ -144,6 +153,9 @@ const Details = styled.div`
     align-items: flex-start;
     flex-direction: column;
     gap: 0.7rem;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
     input {
       padding: 0.7rem;
       width: 100%;
@@ -164,6 +176,9 @@ const Details = styled.div`
     align-items: flex-start;
     flex-direction: column;
     gap: 0.7rem;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
     input {
       padding: 0.7rem;
       width: 100%;
@@ -200,6 +215,11 @@ const Links = styled.div`
   justify-content: flex-start;
   align-items: flex-end;
   gap: 10rem;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
   button {
     padding: 0.8rem 5rem;
     border-radius: 10px;

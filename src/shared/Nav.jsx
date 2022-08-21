@@ -31,14 +31,19 @@ const Main = styled.div`
   gap: 2rem;
   width: 40vw;
   margin: 0 auto;
- 
-  padding: ;
+  @media screen and (max-width: 600px) {
+    width: 90vw;
+  }
   .heading {
     p {
       color: #4e598c;
       font-weight: 700;
       font-size: 30px;
       line-height: 50px;
+      @media screen and (max-width: 600px) {
+        font-size: 25px;
+        width: max-content;
+      }
     }
   }
 `
@@ -49,7 +54,7 @@ const Shared = styled.div`
   width: 100%;
   border-bottom: 1px solid black;
   padding: 0.6rem;
-  a{
+  a {
     text-decoration: none;
   }
   .focused {
@@ -69,6 +74,10 @@ const Shared = styled.div`
       right: 0.6rem;
       border-radius: 10px;
     }
+    @media screen and (max-width: 600px) {
+      font-size: 15px;
+      width: max-content;
+    }
   }
   .notFocused {
     color: #bdbdbd;
@@ -76,6 +85,10 @@ const Shared = styled.div`
     font-size: 20px;
     line-height: 34px;
     cursor: pointer;
+    @media screen and (max-width: 600px) {
+      font-size: 15px;
+      width: max-content;
+    }
   }
 `
 

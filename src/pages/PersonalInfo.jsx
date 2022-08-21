@@ -88,9 +88,8 @@ function PersonalInfo() {
 }
 
 const Section = styled.div`
-padding: 5rem 0;
-
-    
+  padding: 5rem 0;
+  
 `
 const Info = styled.div`
   /* border: 2px solid green; */
@@ -99,16 +98,18 @@ const Info = styled.div`
   align-items: center;
   width: 40vw;
   margin: 4rem auto;
-  form{
+  @media screen and (max-width: 600px) {
+    width: 90vw;
+  }
+
+  form {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 4rem;
-    
   }
-  
 `
 
 const MainLabel = styled.div`
@@ -230,6 +231,11 @@ const Links = styled.div`
   justify-content: flex-start;
   align-items: flex-end;
   gap: 10rem;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
   button {
     padding: 0.8rem 5rem;
     border-radius: 10px;
