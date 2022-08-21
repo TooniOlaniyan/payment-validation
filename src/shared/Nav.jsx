@@ -1,64 +1,35 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useState } from 'react'
-import {Link , useNavigate} from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import {NavLink , useNavigate , useParams } from 'react-router-dom'
 
 function Nav() {
-  const [selected , setSelected] = useState(false)
-  const [selectedOne , setSelectedOne] = useState(false)
-  const [selectedTwo , setSelectedTwo] = useState(false)
-  const navigate = useNavigate()
-
-  const handleClick = () => {
-    setSelected(true)
-    setSelectedOne(false)
-    setSelectedTwo(false)
-    
-
-  }
-  const handleClickOne = () => {
-     setSelected(false)
-     setSelectedOne(true)
-     setSelectedTwo(false)
-     navigate('/billing-info')
-    
-
-  }
-  const handleClickTwo = () => {
-      setSelected(false)
-      setSelectedOne(false)
-      setSelectedTwo(true)
-      navigate('/confirm-payment')
-
-  }
   return (
     <Main>
       <div className='heading'>
         <p>Complete your Purchase</p>
       </div>
       <Shared>
-        <p
-          onClick={handleClick}
-          className={selected ? 'focused' : 'notFocused'}
+        <NavLink
+          to='/personal-info'
+          
         >
-          Personal Info
-        </p>
+          <p>Personal Info</p>
+        </NavLink>
 
-        <p
-          onClick={handleClickOne}
-          className={selectedOne ? 'focused' : 'notFocused'}
+        <NavLink
+          to='/billing-info'
+          
         >
-          Billing Info
-        </p>
+          <p>Billing Info</p>
+        </NavLink>
 
-        
-          <p
-            onClick={handleClickTwo}
-            className={selectedTwo ? 'focused' : 'notFocused'}
-          >
-            Confirm Payment
-          </p>
-        
+        <NavLink
+          to='/confirm-payment'
+          
+        >
+          <p>Confirm Payment</p>
+        </NavLink>
       </Shared>
     </Main>
   )
@@ -100,8 +71,13 @@ const Shared = styled.div`
   padding: 0.6rem;
   a {
     text-decoration: none;
+    color: #bdbdbd;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 34px;
+    cursor: pointer;
   }
-  .focused {
+  a.active {
     color: #f2994a;
     font-weight: 700;
     font-size: 20px;
@@ -112,7 +88,7 @@ const Shared = styled.div`
       content: '';
       position: absolute;
       width: 100%;
-      height: 13px;
+      height: 10px;
       background-color: #f2994a;
       bottom: -1rem;
       right: 0.6rem;
@@ -123,17 +99,7 @@ const Shared = styled.div`
       width: max-content;
     }
   }
-  .notFocused {
-    color: #bdbdbd;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 34px;
-    cursor: pointer;
-    @media screen and (max-width: 600px) {
-      font-size: 15px;
-      width: max-content;
-    }
-  }
+ 
 `
 
 export default Nav
