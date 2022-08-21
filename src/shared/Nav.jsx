@@ -1,23 +1,64 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Link} from 'react-router-dom'
+import { useState } from 'react'
+import {Link , useNavigate} from 'react-router-dom'
 
 function Nav() {
+  const [selected , setSelected] = useState(false)
+  const [selectedOne , setSelectedOne] = useState(false)
+  const [selectedTwo , setSelectedTwo] = useState(false)
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    setSelected(true)
+    setSelectedOne(false)
+    setSelectedTwo(false)
+    
+
+  }
+  const handleClickOne = () => {
+     setSelected(false)
+     setSelectedOne(true)
+     setSelectedTwo(false)
+     navigate('/billing-info')
+    
+
+  }
+  const handleClickTwo = () => {
+      setSelected(false)
+      setSelectedOne(false)
+      setSelectedTwo(true)
+      navigate('/confirm-payment')
+
+  }
   return (
     <Main>
       <div className='heading'>
         <p>Complete your Purchase</p>
       </div>
       <Shared>
-        <Link to='/personal-info'>
-          <p className='focused'>Personal Info</p>
-        </Link>
-        <Link to='/billing-info'>
-          <p className='notFocused'>Billing Info</p>
-        </Link>
-        <Link to='/confirm-payment'>
-          <p className='notFocused'>Confirm Payment</p>
-        </Link>
+        <p
+          onClick={handleClick}
+          className={selected ? 'focused' : 'notFocused'}
+        >
+          Personal Info
+        </p>
+
+        <p
+          onClick={handleClickOne}
+          className={selectedOne ? 'focused' : 'notFocused'}
+        >
+          Billing Info
+        </p>
+
+        
+          <p
+            onClick={handleClickTwo}
+            className={selectedTwo ? 'focused' : 'notFocused'}
+          >
+            Confirm Payment
+          </p>
+        
       </Shared>
     </Main>
   )
