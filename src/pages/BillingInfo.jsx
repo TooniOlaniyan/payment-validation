@@ -26,11 +26,11 @@ function BillingInfo() {
               <input type='text' />
             </div>
             <div className='expire'>
-              <label htmlFor=''>Card Details</label>
+              <label htmlFor=''>Expiry date</label>
               <input type='text' placeholder='MM/YY' />
             </div>
             <div className='cvc'>
-              <label htmlFor=''>Card Details</label>
+              <label htmlFor=''>CVV</label>
               <input type='tel' placeholder='CVC' />
             </div>
           </Details>
