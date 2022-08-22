@@ -13,19 +13,19 @@ function Nav() {
       
         <Shared>
             <NavLink to='/personal-info'>
-              <motion.p layoutId='active'>Personal Info</motion.p>
+              <p layoutId='active'>Personal Info</p>
             </NavLink>
           
 
           
             <NavLink to='/billing-info'>
-              <motion.p layoutId='active'>Billing Info</motion.p>
+              <p >Billing Info</p>
             </NavLink>
           
 
           
             <NavLink to='/confirm-payment'>
-              <motion.p layoutId='active'>Confirm Payment</motion.p>
+              <p>Confirm Payment</p>
             </NavLink>
           
         </Shared>
