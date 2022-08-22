@@ -10,11 +10,11 @@ function BillingInfo() {
       <Info>
         <form>
           <MainLabel>
-            <label htmlFor=''>Name On Card*</label>
+            <label htmlFor=''>Name On Card &nbsp;*</label>
             <input type='text' placeholder='Enter Name' />
           </MainLabel>
           <MainLabel>
-            <label htmlFor=''>Card Type*</label>
+            <label htmlFor=''>Card Type &nbsp;*</label>
             <select name='card' id='card'>
               <option value='Visa'>Visa</option>
               <option value='Mastercard'>Mastercard</option>
