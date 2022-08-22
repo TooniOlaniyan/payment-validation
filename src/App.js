@@ -11,7 +11,7 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path='/personal-info' element={<PersonalInfo />} />
+          <Route path='/' element={<PersonalInfo />} />
           <Route path='/billing-info' element={<BillingInfo />} />
           <Route path='/confirm-payment' element={<ConfirmPayment />} />
           <Route path='/confirmed' element={<PaymentConfirmed/>}/>

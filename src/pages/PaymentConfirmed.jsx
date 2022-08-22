@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom"
 import styled from 'styled-components'
 import greentick from '../asset/jpg/tick.png'
 
@@ -13,7 +14,7 @@ const PaymentConfirmed = () => {
                     <h1>Payment Completed</h1>
                     <p>Please check your email concerning the details of this transaction</p>
                     <div>
-                        <a href="#">Return Home</a>
+                        <Link to="/">Return Home</Link>
                     </div>
                 </div>
             </Container>
