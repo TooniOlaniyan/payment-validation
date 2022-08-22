@@ -79,7 +79,6 @@ function PersonalInfo() {
               <button>Next</button>
             </Link>
             <Link to='/'><p>cancel Payment</p></Link>
-
           </Links>
         </form>
       </Info>
