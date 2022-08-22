@@ -2,35 +2,36 @@ import React from 'react'
 import styled from 'styled-components'
 import { useState, useEffect } from 'react'
 import {NavLink , useNavigate , useParams } from 'react-router-dom'
+import { motion, AnimateSharedLayout } from 'framer-motion'
 
 function Nav() {
+  const [selected, setSelected] = useState('active')
   return (
     <Main>
       <div className='heading'>
         <p>Complete your Purchase</p>
       </div>
-      <Shared>
-        <NavLink
-          to='/personal-info'
-          
-        >
-          <p>Personal Info</p>
-        </NavLink>
+      <AnimateSharedLayout>
+        <Shared>
+          <motion.div animate>
+            <NavLink to='/personal-info'>
+              <motion.p layoutId='active'>Personal Info</motion.p>
+            </NavLink>
+          </motion.div>
 
-        <NavLink
-          to='/billing-info'
-          
-        >
-          <p>Billing Info</p>
-        </NavLink>
+          <motion.div  animate>
+            <NavLink to='/billing-info'>
+              <motion.p layoutId='active'>Billing Info</motion.p>
+            </NavLink>
+          </motion.div>
 
-        <NavLink
-          to='/confirm-payment'
-          
-        >
-          <p>Confirm Payment</p>
-        </NavLink>
-      </Shared>
+          <motion.div animate >
+            <NavLink to='/confirm-payment'>
+              <motion.p layoutId='active'>Confirm Payment</motion.p>
+            </NavLink>
+          </motion.div>
+        </Shared>
+      </AnimateSharedLayout>
     </Main>
   )
 }
