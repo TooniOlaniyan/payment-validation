@@ -15,7 +15,7 @@ function Nav() {
       
         <Shared>
             <NavLink to='/personal-info'>
-              <p layoutId='active'>Personal Info</p>
+              <p>Personal Info</p>
             </NavLink>
 
           
@@ -72,6 +72,7 @@ const Shared = styled.div`
   width: 100%;
   border-bottom: 1px solid black;
   padding: 0.6rem;
+  pointer-events: none;
   a {
     text-decoration: none;
     color: #bdbdbd;

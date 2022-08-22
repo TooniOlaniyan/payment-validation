@@ -45,7 +45,7 @@ const Container = styled.div`
   }
   .completed {
     h1 {
-      font-size: 48px;
+      font-size: 40px;
       color: #4e598c;
       margin-bottom: 32px;
     }
