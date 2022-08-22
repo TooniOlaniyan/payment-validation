@@ -8,14 +8,16 @@ function Nav() {
 
   return (
     <Main>
-      <div className='heading'>
+      <div className="heading">
         <p>Complete your Purchase</p>
       </div>
+
       
         <Shared>
             <NavLink to='/personal-info'>
               <p layoutId='active'>Personal Info</p>
             </NavLink>
+
           
 
           
@@ -32,7 +34,7 @@ function Nav() {
         </Shared>
       
     </Main>
-  )
+  );
 }
 
 const Main = styled.div`
@@ -43,6 +45,7 @@ const Main = styled.div`
   gap: 2rem;
   width: 40vw;
   margin: 0 auto;
+
   @media screen and (max-width: 600px) {
     width: 90vw;
   }
