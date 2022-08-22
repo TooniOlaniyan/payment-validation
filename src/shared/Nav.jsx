@@ -14,7 +14,7 @@ function Nav() {
 
       
         <Shared>
-            <NavLink to='/personal-info'>
+            <NavLink to='/'>
               <p>Personal Info</p>
             </NavLink>
 

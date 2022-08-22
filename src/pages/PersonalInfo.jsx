@@ -2,6 +2,8 @@ import React from 'react'
 import Nav from '../shared/Nav'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
+
+
 function PersonalInfo() {
   return (
     <Section>
